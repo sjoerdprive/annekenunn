@@ -1,0 +1,37 @@
+@layer webmodu-base {
+  header.banner {
+    @extend .py-2;
+
+    .menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .brand {
+        color: $primary;
+        font-size: $size-h1;
+        text-decoration: none;
+      }
+
+      .nav {
+        @media (max-width: $breakpoint-sm) {
+          display: none;
+        }
+        display: flex;
+        list-style: none;
+
+        height: 100%;
+
+        a {
+          text-decoration: none;
+        }
+      }
+
+      .hamburger {
+        @media (min-width: $breakpoint-sm) {
+          display: none;
+        }
+      }
+    }
+  }
+}

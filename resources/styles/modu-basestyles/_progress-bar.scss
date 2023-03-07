@@ -1,0 +1,42 @@
+@layer webmodu-base {
+  .progress-bar {
+    height: 30px;
+    width: 100%;
+    min-width: 100px;
+    max-width: 300px;
+
+    .bar {
+      position: relative;
+      background-color: #dddddd;
+      height: 100%;
+      width: 100%;
+    }
+
+    .fill {
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      width: 0;
+      height: 100%;
+
+      display: flex;
+      place-items: center;
+      place-content: center;
+
+      background-color: $secondary;
+
+      transition: width 0.5s ease-out;
+    }
+
+    .value {
+      color: $light;
+    }
+
+    &.hide-value {
+      .value {
+        @include sr-only;
+      }
+    }
+  }
+}

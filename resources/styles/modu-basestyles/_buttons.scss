@@ -1,0 +1,36 @@
+@layer webmodu-base {
+  .btn {
+    @extend .px-2;
+    @extend .py-1;
+
+    display: block;
+    @media (min-width: $breakpoint-sm) {
+      max-width: fit-content;
+    }
+
+    border-radius: $rounding-btn;
+  }
+
+  .cta {
+    @extend .px-4;
+    @extend .py-2;
+    @extend .lead;
+
+    border-radius: $rounding-btn;
+  }
+
+  @each $k, $v in $colors {
+    .btn.btn-#{'' + $k},
+    .btn.is-style-#{'' + $k} {
+      background-color: $v;
+
+      transition: background-color 0.1s linear;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        background-color: darken($v, 10%);
+      }
+    }
+  }
+}

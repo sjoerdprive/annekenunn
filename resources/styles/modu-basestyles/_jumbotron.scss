@@ -1,0 +1,34 @@
+@layer webmodu-base {
+  .jumbotron {
+    display: flex;
+    position: relative;
+
+    .body {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      @extend .my-auto;
+
+      .text-wrapper,
+      .img-wrapper {
+        flex: 1 0 50%;
+      }
+
+      .img-wrapper {
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .text-wrapper {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}

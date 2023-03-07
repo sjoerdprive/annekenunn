@@ -1,0 +1,18 @@
+@layer webmodu-base {
+  ul {
+    list-style: none;
+  }
+
+  li {
+    @extend .py-2;
+  }
+
+  ul.bullets {
+    li {
+      @extend .py-1;
+      @extend .px-2;
+      @extend .ml-3;
+      list-style: circle;
+    }
+  }
+}

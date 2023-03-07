@@ -1,0 +1,18 @@
+@mixin sr-only {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+@mixin cut-corners($size) {
+  clip-path: polygon(
+    $size 0%,
+    100% 0,
+    100% calc(100% - $size),
+    calc(100% - $size) 100%,
+    0% 100%,
+    0% $size
+  );
+}

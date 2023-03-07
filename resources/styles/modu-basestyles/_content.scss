@@ -1,0 +1,41 @@
+@layer webmodu-base {
+  .content {
+    & > *:not(.wp-block-cover) {
+      @extend .container;
+    }
+  }
+
+  p {
+    margin-bottom: $paragraph-margin-bottom;
+  }
+
+  section.section {
+    padding-block: 3rem;
+
+    @media (min-width: $breakpoint-md) {
+      padding-block: 5rem;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    width: 100%;
+    @extend .mx-auto;
+  }
+
+  @each $k, $v in $typography-sizes {
+    #{$k} {
+      margin-bottom: calc($v * 0.5);
+
+      * + & {
+        // margin-top: calc($heading-margin-bottom * 1.5);
+      }
+
+      @media (max-width: $breakpoint-sm) {
+        &:not(.fixed) {
+          text-align: center !important;
+        }
+      }
+    }
+  }
+}

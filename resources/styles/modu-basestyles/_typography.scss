@@ -1,0 +1,26 @@
+@layer webmodu-base {
+  @each $k, $v in $typography-sizes {
+    #{$k},
+    .#{$k},
+    .is-style-#{$k} {
+      font-size: $v;
+      font-family: map-get($map: $typography-fonts, $key: #{'' + $k});
+    }
+  }
+
+  .centered {
+    text-align: center;
+  }
+
+  .right {
+    text-align: end;
+  }
+
+  .jumbotron {
+    line-height: 1;
+  }
+
+  blockquote {
+    font-style: italic;
+  }
+}

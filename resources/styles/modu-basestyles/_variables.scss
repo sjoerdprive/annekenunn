@@ -1,0 +1,99 @@
+$primary: #3ba55b !default;
+$secondary: #cc5200 !default;
+$white: #ffffff !default;
+$black: #001220 !default;
+$light: #fbfdff !default;
+
+$breakpoint-sm: 600px !default;
+$breakpoint-md: 1024px !default;
+$breakpoint-lg: 1500px !default;
+$breakpoint-xl: 2000px !default;
+
+$spacing-0: 0 !default;
+$spacing-1: 0.5rem !default;
+$spacing-2: 0.75rem !default;
+$spacing-3: 1.25rem !default;
+$spacing-4: 2rem !default;
+$spacing-5: 5rem !default;
+
+$font-body: 'Atkinson Hyperlegible', sans-serif !default;
+$font-headings: 'Atkinson Hyperlegible', sans-serif !default;
+$font-jumbo: $font-headings !default;
+$font-lead: $font-body !default;
+
+$font-jumbo: $font-jumbo !default;
+$font-h1: $font-headings !default;
+$font-h2: $font-headings !default;
+$font-h3: $font-headings !default;
+$font-h4: $font-headings !default;
+$font-h5: $font-headings !default;
+$font-h6: $font-headings !default;
+
+$size-jumbo: 4rem !default;
+$size-lead: 1.15rem !default;
+$size-h1: 2.5rem !default;
+$size-h2: 1.75rem !default;
+$size-h3: 1.25rem !default;
+$size-h4: 1.15rem !default;
+$size-h5: 1.1rem !default;
+$size-h6: 1.05rem !default;
+
+$link-color: $primary !default;
+$link-color-hover: darken($primary, 20%) !default;
+
+$body-color: $black !default;
+
+$paragraph-margin-bottom: 1rem !default;
+$heading-margin-bottom: 1rem !default;
+
+$rounding: 0.5rem !default;
+$rounding-btn: 0.25rem !default;
+
+$column-width-base: 300px !default;
+
+$colors: (
+  primary: $primary,
+  secondary: $secondary,
+  white: $white,
+  black: $black,
+  light: $light,
+);
+
+$breakpoints: (
+  sm: $breakpoint-sm,
+  md: $breakpoint-md,
+  lg: $breakpoint-lg,
+  xl: $breakpoint-xl,
+);
+
+$spacing: (
+  0: $spacing-0,
+  1: $spacing-1,
+  2: $spacing-2,
+  3: $spacing-3,
+  4: $spacing-4,
+  5: $spacing-5,
+  auto: auto,
+);
+
+$typography-sizes: (
+  jumbo: $size-jumbo,
+  h1: $size-h1,
+  h2: $size-h2,
+  h3: $size-h3,
+  h4: $size-h4,
+  h5: $size-h5,
+  h6: $size-h6,
+  lead: $size-lead,
+);
+
+$typography-fonts: (
+  jumbo: $font-jumbo,
+  h1: $font-h1,
+  h2: $font-h2,
+  h3: $font-h3,
+  h4: $font-h4,
+  h5: $font-h5,
+  h6: $font-h6,
+  lead: $font-lead,
+);

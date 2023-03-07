@@ -1,0 +1,86 @@
+@each $k, $v in $colors {
+  .#{'' + $k} {
+    color: $v;
+  }
+
+  .bg-#{'' + $k} {
+    background-color: $v;
+  }
+}
+
+@each $k, $v in $spacing {
+  .m-#{$k} {
+    margin: $v;
+  }
+
+  .mt-#{$k} {
+    margin-top: $v;
+  }
+
+  .mb-#{$k} {
+    margin-bottom: $v;
+  }
+
+  .ml-#{$k} {
+    margin-left: $v;
+  }
+
+  .mr-#{$k} {
+    margin-right: $v;
+  }
+
+  .mx-#{$k} {
+    margin-inline: $v;
+  }
+
+  .my-#{$k} {
+    margin-block: $v;
+  }
+
+  .gap-#{$k} {
+    gap: $v;
+  }
+
+  .p-#{$k} {
+    padding: $v;
+  }
+
+  .px-#{$k} {
+    padding-inline: $v;
+  }
+
+  .py-#{$k} {
+    padding-block: $v;
+  }
+
+  .pl-#{$k} {
+    padding-left: $v;
+  }
+
+  .pr-#{$k} {
+    padding-right: $v;
+  }
+}
+
+.container {
+  max-width: $breakpoint-md;
+  width: 100%;
+
+  @extend .px-1;
+
+  @extend .mx-auto;
+}
+
+.container-fluid {
+  width: 100%;
+
+  @extend .px-1;
+}
+
+.rounded {
+  border-radius: $rounding;
+}
+
+.flex {
+  display: flex;
+}
