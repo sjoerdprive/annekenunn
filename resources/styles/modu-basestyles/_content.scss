@@ -15,12 +15,11 @@
     @media (min-width: $breakpoint-md) {
       padding-block: 5rem;
     }
-  }
-
-  img {
-    max-width: 100%;
-    width: 100%;
-    @extend .mx-auto;
+    img {
+      max-width: 100%;
+      width: 100%;
+      @extend .mx-auto;
+    }
   }
 
   @each $k, $v in $typography-sizes {

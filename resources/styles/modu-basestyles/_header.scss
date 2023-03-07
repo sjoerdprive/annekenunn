@@ -1,17 +1,19 @@
 @layer webmodu-base {
   header.banner {
-    @extend .py-2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .brand {
+      color: $primary;
+      font-size: $size-h1;
+      text-decoration: none;
+    }
 
     .menu {
       display: flex;
       justify-content: space-between;
       align-items: center;
-
-      .brand {
-        color: $primary;
-        font-size: $size-h1;
-        text-decoration: none;
-      }
 
       .nav {
         @media (max-width: $breakpoint-sm) {
@@ -24,6 +26,21 @@
 
         a {
           text-decoration: none;
+        }
+
+        .has-children {
+          position: relative;
+
+          display: flex;
+          align-items: center;
+
+          gap: 2px;
+
+          .sub-menu {
+            position: absolute;
+            top: 1rem;
+            left: 0;
+          }
         }
       }
 
