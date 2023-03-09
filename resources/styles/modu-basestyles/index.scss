@@ -16,6 +16,7 @@
 @import 'lists';
 @import 'carousel';
 @import 'progress-bar';
+@import 'menu';
 
 .sr-only {
   @include sr-only();
@@ -26,11 +27,11 @@
 }
 
 @layer webmodu-base {
-  body,
-  .editor-styles-wrapper {
+  body {
     font-family: $font-body;
     color: $body-color;
   }
+
   *:focus-visible {
     outline: 2px solid black;
   }

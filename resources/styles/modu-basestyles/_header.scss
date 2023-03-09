@@ -1,66 +1,14 @@
 @layer webmodu-base {
   header.banner {
     display: flex;
-    align-items: center;
+    // align-items: center;
     justify-content: space-between;
+    @extend .mb-4;
 
     .brand {
       color: $primary;
       font-size: $size-h1;
       text-decoration: none;
-    }
-
-    .menu {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      .nav {
-        @media (max-width: $breakpoint-sm) {
-          display: none;
-        }
-        display: flex;
-        list-style: none;
-
-        height: 100%;
-
-        a {
-          text-decoration: none;
-          @extend .p-1;
-
-          color: $black;
-
-          &.active {
-            background-color: $primary;
-            color: $white;
-          }
-        }
-
-        .nav-link {
-          display: flex;
-          align-items: center;
-        }
-
-        .has-children {
-          position: relative;
-
-          gap: 2px;
-
-          .sub-menu {
-            position: absolute;
-            top: 2rem;
-            left: 0;
-
-            background-color: $body-bg;
-          }
-        }
-      }
-
-      .hamburger {
-        @media (min-width: $breakpoint-sm) {
-          display: none;
-        }
-      }
     }
   }
 }

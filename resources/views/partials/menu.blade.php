@@ -1,52 +1,35 @@
-@php
-    $menu = create_menu('primary');
-@endphp
+<div class="menu menu-desktop">
 
-<ul class="nav gap-1 desktop-menu">
-    @foreach ($menu as $item)
-        @php
-            // Set class names if the menu item is active
-            $menu_item_active_class = get_the_ID() == $item['ID'] ? 'active' : '';
-            $sub_menu_item_active_class = get_the_ID() == $item['ID'] ? 'active' : '';
-        @endphp
 
-        <li>
+    @include('partials.nav')
+</div>
 
-            @if (isset($item['children']))
-                <div x-data="{ open: false }" class="nav-link has-children">
-                    @if (isset($item['url']))
-                        <a class="{{ $menu_item_active_class }}" href="{{ $item['url'] }}">{{ $item['title'] }}</a>
-                    @else
-                        <span>{{ $item['title'] }}</span>
-                    @endif
+<div x-data="{ open: false }" class="menu menu-mobile">
+    <button @click="open = true" :aria-expanded="open" class="hamburger">
+        <span class="sr-only">
+            Hoofdmenu
+        </span>
+        <i class="fa-solid fa-bars fa-lg"></i>
+    </button>
 
-                    <button class="px-1" @click="open = !open" :aria-expanded="open">
-                        <span class="sr-only">
-                            Submenu {{ $item['title'] }}
-                        </span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </button>
-                    <ul class="sub-menu" x-show="open" x-collapse>
-                        @foreach ($item['children'] as $child)
-                            <li>
-                                <a class="{{ $menu_item_active_class }}"
-                                    href="{{ $child['url'] }}">{{ $child['title'] }}</a>
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
-            @else
-                <div class="nav-link">
-                    <a class="{{ $menu_item_active_class }}" href="{{ $item['url'] }}">{{ $item['title'] }}</a>
-                </div>
-            @endif
-        </li>
-    @endforeach
-</ul>
 
-<button x-data class="hamburger">
-    <span class="sr-only">
-        Hoofdmenu
-    </span>
-    <i class="fa-solid fa-hamburger"></i>
-</button>
+    <div class="menu-backdrop" x-show="open" x-transition.opacity>
+    </div>
+
+
+    <div @keydown.escape.window="open = false" @click.outside="open = false" x-show="open" class="menu-wrapper"
+        x-trap="open" x-transition>
+        <div class="close-wrapper">
+            <button @click="open = false" :aria-expanded="open" class="close">
+                <span class="sr-only">
+                    Sluit hoofdmenu
+                </span>
+                <i class="fa-solid fa-xmark fa-lg"></i>
+            </button>
+        </div>
+
+        @include('partials.nav')
+    </div>
+
+
+</div>

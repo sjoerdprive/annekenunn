@@ -1,0 +1,120 @@
+@layer webmodu-base {
+  .nav-primary {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu {
+    .submenu-chevron {
+      transition: transform 0.1s ease-out;
+      transform: rotateZ(0deg);
+    }
+
+    .submenu-chevron-rotated {
+      transform: rotateZ(-180deg);
+    }
+    .nav {
+      .sub-menu {
+        background-color: #f7f7f7;
+        width: 100%;
+
+        @extend .py-1;
+        @extend .px-1;
+      }
+
+      .item-wrapper {
+        display: flex;
+        align-items: center;
+      }
+
+      .active {
+        a {
+          color: $primary;
+        }
+      }
+
+      a {
+        display: block;
+
+        text-decoration: none;
+        color: $black;
+
+        @extend .p-1;
+      }
+    }
+  }
+
+  .menu-desktop {
+    @media (max-width: $breakpoint-sm) {
+      display: none;
+    }
+
+    .nav {
+      display: flex;
+      list-style: none;
+
+      height: 100%;
+
+      @extend .gap-2;
+
+      .has-children {
+        position: relative;
+
+        .sub-menu {
+          position: absolute;
+          top: 100%;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  .menu-mobile {
+    @media (min-width: $breakpoint-sm) {
+      display: none;
+    }
+
+    .menu-backdrop {
+      background-color: #0008;
+      left: 0;
+      top: 0;
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .menu-wrapper {
+      position: fixed;
+      z-index: 100;
+      right: 0;
+      top: 0;
+      height: 100vh;
+
+      background-color: $body-bg;
+    }
+
+    .close-wrapper {
+      display: flex;
+      justify-content: flex-end;
+
+      @extend .p-2;
+    }
+
+    .nav {
+      display: flex;
+      flex-direction: column;
+
+      width: 20rem;
+      max-width: 100vw;
+    }
+
+    .item-wrapper {
+      @extend .px-2;
+    }
+
+    .hamburger,
+    .close {
+      @extend .p-2;
+    }
+  }
+}

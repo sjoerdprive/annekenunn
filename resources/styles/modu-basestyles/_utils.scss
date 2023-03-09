@@ -60,6 +60,14 @@
   .pr-#{$k} {
     padding-right: $v;
   }
+
+  .pt-#{$k} {
+    padding-top: $v;
+  }
+
+  .pb-#{$k} {
+    padding-bottom: $v;
+  }
 }
 
 .container {

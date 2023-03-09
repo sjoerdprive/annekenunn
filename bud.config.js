@@ -65,21 +65,43 @@ export default async (app) => {
         defaultGradients: false,
         defaultPalette: false,
         duotone: [],
-      },
-      custom: {
-        spacing: {},
-        typography: {
-          'font-size': {},
-          'line-height': {},
+        palette: [
+          {
+            "name": "Zwart",
+            "slug": "black",
+            "color": "#001220"
+          },
+          {
+            "name": "Wit",
+            "slug": "white",
+            "color": "#ffffff"
+          },
+          {
+            "name": "Primair",
+            "slug": "primary",
+            "color": "#3ba55b"
+          },
+          {
+            "name": "Secundair",
+            "slug": "secondary",
+            "color": "#cc5200"
+          }
+        ],
+        custom: {
+          spacing: {},
+          typography: {
+            'font-size': {},
+            'line-height': {},
+          },
         },
-      },
-      spacing: {
-        padding: true,
-        units: ['px', '%', 'em', 'rem', 'vw', 'vh'],
-      },
-      typography: {
-        customFontSize: false,
-      },
+        spacing: {
+          padding: true,
+          units: ['px', '%', 'em', 'rem', 'vw', 'vh'],
+        },
+        typography: {
+          customFontSize: false,
+        }
+      }
     })
     .enable();
 };
