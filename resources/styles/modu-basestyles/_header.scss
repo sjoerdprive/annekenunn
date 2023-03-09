@@ -26,19 +26,33 @@
 
         a {
           text-decoration: none;
+          @extend .p-1;
+
+          color: $black;
+
+          &:hover {
+            color: $primary;
+          }
+
+          &.active {
+            background-color: $primary;
+            color: $white;
+          }
+        }
+
+        .nav-link {
+          display: flex;
+          align-items: center;
         }
 
         .has-children {
           position: relative;
 
-          display: flex;
-          align-items: center;
-
           gap: 2px;
 
           .sub-menu {
             position: absolute;
-            top: 1rem;
+            top: 2rem;
             left: 0;
           }
         }
