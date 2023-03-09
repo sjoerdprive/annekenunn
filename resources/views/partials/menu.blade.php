@@ -2,7 +2,7 @@
     $menu = create_menu('primary');
 @endphp
 
-<ul class="nav gap-1">
+<ul class="nav gap-1 desktop-menu">
     @foreach ($menu as $item)
         @php
             // Set class names if the menu item is active
@@ -26,7 +26,7 @@
                         </span>
                         <i class="fa-solid fa-chevron-down"></i>
                     </button>
-                    <ul class="sub-menu" x-show="open" x-transition>
+                    <ul class="sub-menu" x-show="open" x-collapse>
                         @foreach ($item['children'] as $child)
                             <li>
                                 <a class="{{ $menu_item_active_class }}"
@@ -43,3 +43,10 @@
         </li>
     @endforeach
 </ul>
+
+<button x-data class="hamburger">
+    <span class="sr-only">
+        Hoofdmenu
+    </span>
+    <i class="fa-solid fa-hamburger"></i>
+</button>

@@ -30,10 +30,6 @@
 
           color: $black;
 
-          &:hover {
-            color: $primary;
-          }
-
           &.active {
             background-color: $primary;
             color: $white;
@@ -54,6 +50,8 @@
             position: absolute;
             top: 2rem;
             left: 0;
+
+            background-color: $body-bg;
           }
         }
       }

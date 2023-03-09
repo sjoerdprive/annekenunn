@@ -23,5 +23,10 @@
     "@roots/bud-sass": "^6.9.1",
     "@roots/sage": "6.9.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@alpinejs/collapse": "^3.12.0",
+    "@alpinejs/focus": "^3.12.0",
+    "@alpinejs/intersect": "^3.12.0",
+    "alpinejs": "^3.12.0"
+  }
 }
