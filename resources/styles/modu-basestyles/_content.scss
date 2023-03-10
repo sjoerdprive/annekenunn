@@ -1,10 +1,11 @@
 @layer webmodu-base {
-  .content,
-  .is-layout-flow {
-    & > *:not(.wp-block-cover) {
-      @extend .container;
-    }
+  // .content,
+  // .is-layout-flow {
+  //   & > *:not(.wp-block-cover):not(section.section) {
+  //     @extend .container;
+  //   }
 
+  .content {
     p {
       margin-bottom: $paragraph-margin-bottom;
     }

@@ -10,7 +10,29 @@
       "defaultDuotone": false,
       "defaultGradients": false,
       "defaultPalette": false,
-      "duotone": []
+      "duotone": [],
+      "palette": [
+        {
+          "name": "Zwart",
+          "slug": "black",
+          "color": "#001220"
+        },
+        {
+          "name": "Wit",
+          "slug": "white",
+          "color": "#ffffff"
+        },
+        {
+          "name": "Primair",
+          "slug": "primary",
+          "color": "#3ba55b"
+        },
+        {
+          "name": "Secundair",
+          "slug": "secondary",
+          "color": "#cc5200"
+        }
+      ]
     },
     "custom": {
       "spacing": {},

@@ -87,22 +87,23 @@ export default async (app) => {
             "color": "#cc5200"
           }
         ],
-        custom: {
-          spacing: {},
-          typography: {
-            'font-size': {},
-            'line-height': {},
-          },
-        },
-        spacing: {
-          padding: true,
-          units: ['px', '%', 'em', 'rem', 'vw', 'vh'],
-        },
+      },
+      custom: {
+        spacing: {},
         typography: {
-          customFontSize: false,
-        }
+          'font-size': {},
+          'line-height': {},
+        },
+      },
+      spacing: {
+        padding: true,
+        units: ['px', '%', 'em', 'rem', 'vw', 'vh'],
+      },
+      typography: {
+        customFontSize: false,
       }
-    })
+    }
+    )
     .enable();
 };
 
