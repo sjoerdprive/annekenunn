@@ -1,0 +1,46 @@
+$colors: (
+  primary: $primary,
+  secondary: $secondary,
+  white: $white,
+  black: $black,
+  light: $light,
+);
+
+$breakpoints: (
+  sm: $breakpoint-sm,
+  md: $breakpoint-md,
+  lg: $breakpoint-lg,
+  xl: $breakpoint-xl,
+);
+
+$spacing: (
+  0: $spacing-0,
+  1: $spacing-1,
+  2: $spacing-2,
+  3: $spacing-3,
+  4: $spacing-4,
+  5: $spacing-5,
+  auto: auto,
+);
+
+$typography-sizes: (
+  jumbo: $size-jumbo,
+  h1: $size-h1,
+  h2: $size-h2,
+  h3: $size-h3,
+  h4: $size-h4,
+  h5: $size-h5,
+  h6: $size-h6,
+  lead: $size-lead,
+);
+
+$typography-fonts: (
+  jumbo: $font-jumbo,
+  h1: $font-h1,
+  h2: $font-h2,
+  h3: $font-h3,
+  h4: $font-h4,
+  h5: $font-h5,
+  h6: $font-h6,
+  lead: $font-lead,
+);

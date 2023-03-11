@@ -85,6 +85,11 @@ export default async (app) => {
             "name": "Secundair",
             "slug": "secondary",
             "color": "#cc5200"
+          },
+          {
+            "name": "Licht",
+            "slug": "light",
+            "color": "#fbfdff"
           }
         ],
       },
@@ -97,7 +102,39 @@ export default async (app) => {
       },
       spacing: {
         padding: true,
-        units: ['px', '%', 'em', 'rem', 'vw', 'vh'],
+        units: ['rem'],
+        spacingSizes: [
+          {
+            "size": "0",
+            "slug": "0",
+            "name": "0"
+          },
+          {
+            "size": "0.5rem",
+            "slug": "1",
+            "name": "1"
+          },
+          {
+            "size": "0.75rem",
+            "slug": "2",
+            "name": "2"
+          },
+          {
+            "size": "1.25rem",
+            "slug": "3",
+            "name": "3"
+          },
+          {
+            "size": "2rem",
+            "slug": "4",
+            "name": "4"
+          },
+          {
+            "size": "5rem",
+            "slug": "5",
+            "name": "5"
+          },
+        ]
       },
       typography: {
         customFontSize: false,
