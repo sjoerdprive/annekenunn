@@ -82,6 +82,12 @@ add_action('after_setup_theme', function () {
   add_theme_support('post-thumbnails');
 
   /**
+   * Enable post wide alignment support.
+   *
+   * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+   */
+  add_theme_support('align-wide');
+  /**
    * Enable responsive embed support.
    *
    * @link https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/#responsive-embedded-content
@@ -134,4 +140,3 @@ add_action('widgets_init', function () {
     'id' => 'sidebar-footer',
   ] + $config);
 });
-
