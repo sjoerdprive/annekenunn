@@ -6,12 +6,13 @@
 
   <main id="main" class="main content">
     @yield('content')
+    @php(dynamic_sidebar('sidebar-contact'))
   </main>
-
-  @hasSection('sidebar')
-    <aside class="sidebar">
-      @yield('sidebar')
-    </aside>
+  @hasSection ('sidebar')
+  <aside class="sidebar">
+    @yield('sidebar')
+  </aside>      
   @endif
+
 
 @include('sections.footer')

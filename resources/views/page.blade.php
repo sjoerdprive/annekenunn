@@ -8,3 +8,8 @@
         @includeFirst(['partials.content-page', 'partials.content'])
     @endwhile
 @endsection
+
+{{-- 
+@section('sidebar')
+  @include('sections.sidebar')
+@endsection --}}

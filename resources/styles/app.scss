@@ -1,6 +1,14 @@
 @import 'variables';
 @import 'modu-basestyles/index';
 
+@import 'header';
+@import 'menu';
+@import 'styles';
+@import 'links';
+
 body {
-  letter-spacing: 0.04rem;
+  // letter-spacing: 0.04rem;
+  line-height: 30px;
+  font-size: 1.4rem;
 }
+

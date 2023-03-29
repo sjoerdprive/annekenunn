@@ -1,0 +1,17 @@
+header.banner {
+  background-color: $secondary;
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+  } 
+  .brand {
+    figure, figcaption {
+        margin: 0;
+    }
+    figcaption {
+      font-size: small;
+      color: $black;
+    }
+  }
+}

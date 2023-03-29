@@ -37,7 +37,7 @@ function create_menu($menu_id = '')
         [
           'ID' => url_to_postid($item->url),
           'title' => $item->title,
-          'url' => $item->url,
+        'url' => $item->url,
         ]
       );
       continue;
@@ -47,7 +47,7 @@ function create_menu($menu_id = '')
     $new_menu[] = [
       'ID' => url_to_postid($item->url),
       'title' => $item->title,
-      'url' => $item->url,
+        'url' => $item->url,
     ];
   }
   return $new_menu;

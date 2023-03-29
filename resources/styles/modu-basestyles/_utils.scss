@@ -71,7 +71,7 @@
 }
 
 .container {
-  max-width: $breakpoint-md;
+  max-width: $container-max-width;
   width: 100%;
 
   @extend .px-1;

@@ -1,0 +1,27 @@
+
+
+.wp-block-group.is-style-segmented {
+    & > *:not(:last-child) {
+      position: relative;
+      padding-right: 0.5rem;
+  
+      &:after {
+        content: "|";
+        position: absolute;
+        right: 0;
+        width: 0px;
+        color: $black;
+      }
+    }
+  }
+
+  .wp-block-group.is-style-outlined {
+    outline: 3px solid darkgray;
+    border-radius: $rounding;
+
+    margin-bottom: $paragraph-margin-bottom;
+
+    & > * {
+      margin: 0;
+    }
+  }

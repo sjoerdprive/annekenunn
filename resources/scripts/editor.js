@@ -11,6 +11,17 @@ domReady(() => {
     name: 'outline',
     label: 'Outline',
   });
+
+  registerBlockStyle('core/group', {
+    name: 'segmented',
+    label: 'Gesegmenteerd',
+  });
+
+  registerBlockStyle('core/group', {
+    name: 'outlined',
+    label: 'Omlijnd',
+  });
+  
 });
 
 /**

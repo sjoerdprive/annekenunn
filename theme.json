@@ -25,12 +25,12 @@
         {
           "name": "Primair",
           "slug": "primary",
-          "color": "#3ba55b"
+          "color": "#D43F51"
         },
         {
           "name": "Secundair",
           "slug": "secondary",
-          "color": "#cc5200"
+          "color": "#F0ECE1"
         },
         {
           "name": "Licht",

@@ -1,0 +1,22 @@
+.nav-primary {
+    .nav {
+        a {
+            @extend .btn;
+            color: #696969;
+            font-weight: 700;
+
+            &:hover {
+                @extend .btn-white;
+                color: #696969;
+
+            }
+        }
+
+        .active {
+            a {
+                @extend .btn-primary;
+                @extend .white;
+            }
+        }
+    }
+}

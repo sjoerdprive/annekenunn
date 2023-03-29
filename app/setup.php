@@ -6,6 +6,31 @@
 
 namespace App;
 
+
+
+add_action( 'init', function () {
+
+$template = array(
+array('core/cover', array('minHeight'=>600, 'dimRatio'=>0), array()),
+array('webmodu/section', array(), array(
+  
+  array( 'core/columns', array(), array(
+      array( 'core/column', array('width'=>'66.66%'), array(
+          array( 'core/paragraph', array() ),
+      ) ),
+      array( 'core/column', array('width'=>'33.33%'), array(
+          array( 'webmodu/sidebar', array(), array(
+            array( 'core/paragraph', array() ),
+          ) ),
+      ) ),
+  ) )
+))
+
+);
+  $post_type_object = get_post_type_object( 'page' );
+  $post_type_object->template = $template;
+} );
+
 use function Roots\bundle;
 
 /**
@@ -131,12 +156,14 @@ add_action('widgets_init', function () {
   ];
 
   register_sidebar([
-    'name' => __('Primary', 'sage'),
-    'id' => 'sidebar-primary',
-  ] + $config);
-
-  register_sidebar([
     'name' => __('Footer', 'sage'),
     'id' => 'sidebar-footer',
   ] + $config);
+
+  register_sidebar([
+    'name' => __('Identiteit', 'sage'),
+    'id' => 'sidebar-identity',
+  ] + $config);
+
+
 });

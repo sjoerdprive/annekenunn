@@ -1,8 +1,74 @@
 @import 'variables';
 @import 'modu-basestyles/index';
+@import 'styles';
 
-@layer webmodu-base {
-  .editor-styles-wrapper {
-    font-family: $font-body;
+.editor-styles-wrapper {
+  @media screen and (min-width: $breakpoint-md) {
+    padding: 0 5rem;
+  }
+
+  .edit-post-visual-editor__post-title-wrapper {
+    // @extend .container
+  }
+
+  font-family: $font-body;
+  line-height: 30px;
+  font-size: 1.4rem;
+
+  p {
+    margin-bottom: $paragraph-margin-bottom;
+  }
+
+  section.section {
+    padding-block: 3rem;
+
+    @media (min-width: $breakpoint-md) {
+      padding-block: 5rem;
+    }
+    img {
+      max-width: 100%;
+      width: 100%;
+      @extend .mx-auto;
+    }
+  }
+
+  @each $k, $v in $typography-sizes {
+    #{$k} {
+      margin-bottom: calc($v * 0.5);
+
+      * + & {
+        // margin-top: calc($heading-margin-bottom * 1.5);
+      }
+
+      @media (max-width: $breakpoint-sm) {
+        &:not(.fixed) {
+          text-align: center !important;
+        }
+      }
+    }
+  }
+  @each $k, $v in $typography-sizes {
+    #{$k},
+    .#{$k},
+    .is-style-#{$k} {
+      font-size: $v;
+      font-family: map-get($map: $typography-fonts, $key: #{'' + $k});
+    }
+  }
+
+  .centered {
+    text-align: center;
+  }
+
+  .right {
+    text-align: end;
+  }
+
+  .jumbotron {
+    line-height: 1;
+  }
+
+  blockquote {
+    font-style: italic;
   }
 }

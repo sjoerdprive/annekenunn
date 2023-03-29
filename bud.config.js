@@ -28,13 +28,13 @@ export default async (app) => {
      * Matched files trigger a page reload when modified
      * @see {@link https://bud.js.org/docs/bud.watch/}
      */
-    .watch(['resources/views', 'app'])
+    .watch(['resources/views/**/*', 'resources/styles/**/*', 'app'])
 
     /**
      *.proxy('http\:\/\/sandbox.local')
      * @see {@link https://bud.js.org/docs/bud.proxy('http\:\/\/sandbox.local')
      */
-    .proxy('http\:\/\/sandbox.local')
+    .proxy('http://localhost:10004')
 
     /**
      * Development origin
@@ -79,12 +79,12 @@ export default async (app) => {
           {
             "name": "Primair",
             "slug": "primary",
-            "color": "#3ba55b"
+            "color": "#D43F51"
           },
           {
             "name": "Secundair",
             "slug": "secondary",
-            "color": "#cc5200"
+            "color": "#F0ECE1"
           },
           {
             "name": "Licht",

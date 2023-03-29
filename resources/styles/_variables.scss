@@ -1,4 +1,9 @@
 @import 'wp';
 
-$font-body: 'Open Sans', sans-serif;
-$font-headings: 'Bebas Neue', sans-serif;
+$font-body: 'Ropa Sans', sans-serif;
+$font-headings: "Trebuchet MS", Arial, Helvetica, sans-serif;
+
+$breakpoint-sm: 880px;
+
+$container-max-width: 1000px;
+$link-color-hover: $black;
