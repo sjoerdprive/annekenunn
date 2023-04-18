@@ -8,8 +8,16 @@ function menu_item_has_children($menu, $parent_id)
   return $found_menu_items;
 }
 
-function create_menu($menu_id = '')
+function create_menu($menu_location = 'primary_navigation')
 {
+  $theme_locations = get_nav_menu_locations();
+
+  $menu_obj = get_term( $theme_locations[$menu_location], 'nav_menu' );
+  
+  $menu_name = $menu_obj->name;
+
+  $menu_id = $menu_name;
+
   $menu = wp_get_nav_menu_items($menu_id);
   $new_menu = array();
 
@@ -50,5 +58,5 @@ function create_menu($menu_id = '')
         'url' => $item->url,
     ];
   }
-  return $new_menu;
+  return ['name'=>$menu_name, 'items'=>$new_menu];
 }

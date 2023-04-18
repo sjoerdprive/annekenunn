@@ -21,7 +21,6 @@ domReady(() => {
     name: 'outlined',
     label: 'Omlijnd',
   });
-  
 });
 
 /**
