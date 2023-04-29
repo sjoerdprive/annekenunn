@@ -1,9 +1,11 @@
 @import 'wp';
 
-$font-body: 'Ropa Sans', sans-serif;
-$font-headings: "Trebuchet MS", Arial, Helvetica, sans-serif;
+$font-body: 'Open sans', sans-serif;
+$font-headings: 'DIN', sans-serif;
 
 $breakpoint-sm: 880px;
 
 $container-max-width: 1000px;
-$link-color-hover: $black;
+
+$link-color: #007560;
+$link-color-hover: darken($link-color, 10%);

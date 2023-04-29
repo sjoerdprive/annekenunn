@@ -1,4 +1,8 @@
 .wp-block-group.is-style-segmented {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
   & > *:not(:last-child) {
     position: relative;
     padding-right: 0.5rem;

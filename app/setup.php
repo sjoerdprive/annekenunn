@@ -11,6 +11,8 @@ namespace App;
 @ini_set( 'post_max_size', '256M');
 @ini_set( 'max_execution_time', '300' );
 
+header('Access-Control-Allow-Origin: *');
+
 add_action( 'init', function () {
 
 $template = array(

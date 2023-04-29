@@ -25,12 +25,22 @@
         {
           "name": "Primair",
           "slug": "primary",
-          "color": "#D43F51"
+          "color": "#D11C23"
+        },
+        {
+          "name": "Primair licht",
+          "slug": "primary-light",
+          "color": "#E33033"
         },
         {
           "name": "Secundair",
           "slug": "secondary",
-          "color": "#F0ECE1"
+          "color": "#fc8c0a"
+        },
+        {
+          "name": "Secundair licht",
+          "slug": "secondary-light",
+          "color": "#f8dbc5"
         },
         {
           "name": "Licht",

@@ -67,30 +67,42 @@ export default async (app) => {
         duotone: [],
         palette: [
           {
-            "name": "Zwart",
-            "slug": "black",
-            "color": "#001220"
+            name: 'Zwart',
+            slug: 'black',
+            color: '#001220',
           },
           {
-            "name": "Wit",
-            "slug": "white",
-            "color": "#ffffff"
+            name: 'Wit',
+            slug: 'white',
+            color: '#ffffff',
           },
           {
-            "name": "Primair",
-            "slug": "primary",
-            "color": "#D43F51"
+            name: 'Primair',
+            slug: 'primary',
+            color: '#D11C23',
           },
           {
-            "name": "Secundair",
-            "slug": "secondary",
-            "color": "#F0ECE1"
+            name: 'Primair licht',
+            slug: 'primary-light',
+            color: '#E33033',
+          },
+
+          {
+            name: 'Secundair',
+            slug: 'secondary',
+            color: '#fc8c0a',
+          },
+          // Suggestie: #F9E3D2 vvv
+          {
+            name: 'Secundair licht',
+            slug: 'secondary-light',
+            color: '#f8dbc5',
           },
           {
-            "name": "Licht",
-            "slug": "light",
-            "color": "#fbfdff"
-          }
+            name: 'Licht',
+            slug: 'light',
+            color: '#fbfdff',
+          },
         ],
       },
       custom: {
@@ -105,42 +117,40 @@ export default async (app) => {
         units: ['rem'],
         spacingSizes: [
           {
-            "size": "0",
-            "slug": "0",
-            "name": "0"
+            size: '0',
+            slug: '0',
+            name: '0',
           },
           {
-            "size": "0.5rem",
-            "slug": "1",
-            "name": "1"
+            size: '0.5rem',
+            slug: '1',
+            name: '1',
           },
           {
-            "size": "0.75rem",
-            "slug": "2",
-            "name": "2"
+            size: '0.75rem',
+            slug: '2',
+            name: '2',
           },
           {
-            "size": "1.25rem",
-            "slug": "3",
-            "name": "3"
+            size: '1.25rem',
+            slug: '3',
+            name: '3',
           },
           {
-            "size": "2rem",
-            "slug": "4",
-            "name": "4"
+            size: '2rem',
+            slug: '4',
+            name: '4',
           },
           {
-            "size": "5rem",
-            "slug": "5",
-            "name": "5"
+            size: '5rem',
+            slug: '5',
+            name: '5',
           },
-        ]
+        ],
       },
       typography: {
         customFontSize: false,
-      }
-    }
-    )
+      },
+    })
     .enable();
 };
-

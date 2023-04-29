@@ -1,1 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
+@font-face {
+  font-family: 'Open sans';
+  font-display: swap;
+  font-style: normal;
+  src: url('../../fonts/OpenSans-VariableFont_wdth\,wght.ttf')
+    format('truetype');
+}
+
+@font-face {
+  font-family: 'Open sans';
+  font-display: swap;
+  font-style: italic;
+  src: url('../../fonts/OpenSans-Italic-VariableFont_wdth\,wght.ttf')
+    format('truetype');
+}
+
+@font-face {
+  font-family: 'DIN';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../fonts/D-DIN.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'DIN';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: url('../../fonts/D-DIN-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'DIN';
+  font-display: swap;
+  font-style: italic;
+  font-weight: 400;
+  src: url('../../fonts/D-DIN-Italic.otf') format('opentype');
+}
