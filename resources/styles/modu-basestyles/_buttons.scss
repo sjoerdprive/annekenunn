@@ -1,6 +1,6 @@
 @layer webmodu-base {
   .btn {
-    @extend .px-2;
+    @extend .px-3;
     @extend .py-1;
 
     display: block;
@@ -17,19 +17,19 @@
 
     border-radius: $rounding-btn;
   }
+}
 
-  @each $k, $v in $colors {
-    .btn.btn-#{'' + $k},
-    .btn.is-style-#{'' + $k} {
-      background-color: $v;
+@each $k, $v in $colors {
+  .btn.btn-#{'' + $k},
+  .btn.is-style-#{'' + $k} {
+    background-color: $v;
 
-      transition: background-color 0.1s linear;
-      text-decoration: none;
+    transition: background-color 0.1s linear;
+    text-decoration: none;
 
-      &:hover,
-      &:focus {
-        // background-color: darken($v, 10%);
-      }
+    &:hover,
+    &:focus {
+      // background-color: darken($v, 10%);
     }
   }
 }

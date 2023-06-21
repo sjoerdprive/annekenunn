@@ -64,7 +64,8 @@ collect(['setup', 'filters'])
     }
   });
 
-include_once 'resources/functions/create-menu.php';
+include_once 'resources/includes/functions/create-menu.php';
+include_once 'resources/includes/classes/custom_posttype.php';
 
 /**
  * Font Awesome Kit Setup
@@ -87,3 +88,9 @@ if (!function_exists('fa_custom_setup_kit')) {
 }
 
 fa_custom_setup_kit('https://kit.fontawesome.com/3ad920e0b0.js');
+
+/**
+ *  Custom post types 
+ */
+
+new CustomPostType("Portfolio");

@@ -39,12 +39,6 @@
       * + & {
         // margin-top: calc($heading-margin-bottom * 1.5);
       }
-
-      @media (max-width: $breakpoint-sm) {
-        &:not(.fixed) {
-          text-align: center !important;
-        }
-      }
     }
   }
   @each $k, $v in $typography-sizes {

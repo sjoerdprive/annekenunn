@@ -26,6 +26,7 @@
     @each $k, $v in $typography-sizes {
       #{$k} {
         margin-bottom: calc($v * 0.5);
+        margin-top: calc($v * 0.75);
 
         * + & {
           // margin-top: calc($heading-margin-bottom * 1.5);

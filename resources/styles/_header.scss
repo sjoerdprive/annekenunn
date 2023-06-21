@@ -1,17 +1,26 @@
 header.banner {
-  background-color: $secondary-light;
+  background-color: $white;
 
   .header-content {
     display: flex;
     justify-content: space-between;
-  } 
+  }
+
   .brand {
-    figure, figcaption {
-        margin: 0;
+    a {
+      display: block;
+    }
+
+    figure,
+    figcaption {
+      margin: 0;
     }
     figcaption {
-      font-size: small;
+      margin-top: 8px;
+      font-size: 8pt;
+
       color: $black;
+      line-height: 1.2;
     }
   }
 }

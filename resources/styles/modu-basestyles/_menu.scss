@@ -27,12 +27,6 @@
         align-items: center;
       }
 
-      .active {
-        a {
-          color: $primary;
-        }
-      }
-
       a {
         display: block;
 
@@ -57,6 +51,12 @@
 
       @extend .gap-2;
 
+      .active {
+        a {
+          color: $primary;
+        }
+      }
+
       .has-children {
         position: relative;
 
@@ -70,6 +70,7 @@
   }
 
   .menu-mobile {
+    z-index: 3000;
     @media (min-width: $breakpoint-sm) {
       display: none;
     }
@@ -85,7 +86,6 @@
 
     .menu-wrapper {
       position: fixed;
-      z-index: 100;
       right: 0;
       top: 0;
       height: 100vh;
@@ -110,6 +110,8 @@
 
     .item-wrapper {
       @extend .px-2;
+      @extend .py-1;
+      border-bottom: 1px solid #ccc;
     }
 
     .hamburger,
