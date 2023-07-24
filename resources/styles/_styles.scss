@@ -76,12 +76,7 @@ img:not(.wp-block-cover__image-background) {
   }
 
   li.hentry {
-    &:nth-child(odd) {
-      flex-direction: row;
-    }
-
-    &:nth-child(even) {
-      flex-direction: row-reverse;
-    }
+    display: flex;
+    flex-direction: row;
   }
 }
