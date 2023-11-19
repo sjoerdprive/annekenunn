@@ -1,5 +1,5 @@
 @php
-    $menu = create_menu('primary');
+    $menu = create_menu();
 @endphp
 
 <ul class="nav">
@@ -11,13 +11,13 @@
         @endphp
 
         <li class="{{ $menu_item_active_class }}">
-            
             @if (isset($item['children']))
                 <div x-data="{ open: false }" class="nav-link has-children">
                     <div class="item-wrapper">
 
                         @if (isset($item['url']))
-                            <a aria-current="{{$is_menu_item_active ? 'page' : 'false'}}" href="{{ $item['url'] }}">{{ $item['title'] }}</a>
+                            <a aria-current="{{ $is_menu_item_active ? 'page' : 'false' }}"
+                                href="{{ $item['url'] }}">{{ $item['title'] }}</a>
                         @else
                             <span>{{ $item['title'] }}</span>
                         @endif
@@ -40,7 +40,8 @@
                             @endphp
                             <li class="{{ $sub_menu_item_active_class }}">
                                 <div class="item-wrapper">
-                                    <a aria-current="{{$is_submenu_active ? 'page' : 'false'}}" href="{{ $child['url'] }}">{{ $child['title'] }}</a>
+                                    <a aria-current="{{ $is_submenu_active ? 'page' : 'false' }}"
+                                        href="{{ $child['url'] }}">{{ $child['title'] }}</a>
                                 </div>
                             </li>
                         @endforeach
@@ -49,7 +50,8 @@
             @else
                 <div class="item-wrapper">
                     <div class="nav-link">
-                        <a aria-current="{{$is_menu_item_active ? 'page' : 'false'}}" href="{{ $item['url'] }}">{{ $item['title'] }}</a>
+                        <a aria-current="{{ $is_menu_item_active ? 'page' : 'false' }}"
+                            href="{{ $item['url'] }}">{{ $item['title'] }}</a>
                     </div>
                 </div>
             @endif

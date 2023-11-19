@@ -1,19 +1,26 @@
-<article @php(post_class('h-entry'))>
-  <header>
-    <h1 class="p-name">
-      {!! $title !!}
-    </h1>
+<article @php(post_class('h-entry container py-5'))>
+    <header>
+        <h1 class="p-name">
+            {!! $title !!}
+        </h1>
 
-    @include('partials.entry-meta')
-  </header>
+        @include('partials.entry-meta')
+    </header>
 
-  <div class="e-content">
-    @php(the_content())
-  </div>
+    <div class="e-content">
+        <section class="section">
 
-  <footer>
-    {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
-  </footer>
+            @php(the_content())
+        </section>
+    </div>
 
-  @php(comments_template())
+    <footer>
+        {!! wp_link_pages([
+            'echo' => 0,
+            'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'),
+            'after' => '</p></nav>',
+        ]) !!}
+    </footer>
+
+    {{-- @php(comments_template()) --}}
 </article>

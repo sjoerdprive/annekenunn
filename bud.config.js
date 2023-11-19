@@ -34,7 +34,7 @@ export default async (app) => {
      *.proxy('http\:\/\/sandbox.local')
      * @see {@link https://bud.js.org/docs/bud.proxy('http\:\/\/sandbox.local')
      */
-    .proxy('http://localhost:10004')
+    .proxy('http://annekenunn.local:41261')
 
     /**
      * Development origin

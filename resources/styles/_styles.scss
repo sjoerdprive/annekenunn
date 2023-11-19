@@ -1,27 +1,44 @@
-
-
 .wp-block-group.is-style-segmented {
-    & > *:not(:last-child) {
-      position: relative;
-      padding-right: 0.5rem;
-  
-      &:after {
-        content: "|";
-        position: absolute;
-        right: 0;
-        width: 0px;
-        color: $black;
-      }
+  & > *:not(:last-child) {
+    position: relative;
+    padding-right: 0.5rem;
+
+    &:after {
+      content: '|';
+      position: absolute;
+      right: 0;
+      width: 0px;
+      color: $black;
     }
   }
+}
 
-  .wp-block-group.is-style-outlined {
-    outline: 3px solid darkgray;
-    border-radius: $rounding;
+.wp-block-group.is-style-outlined {
+  outline: 3px solid darkgray;
+  border-radius: $rounding;
 
-    margin-bottom: $paragraph-margin-bottom;
+  margin-bottom: $paragraph-margin-bottom;
 
-    & > * {
-      margin: 0;
-    }
+  & > * {
+    margin: 0;
   }
+}
+
+ul.wp-block-post-template {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-4;
+}
+
+.hentry.category-portfolio {
+  display: flex;
+  gap: $spacing-3;
+
+  & > .wp-block-post-featured-image {
+    flex: 1 1 50%;
+  }
+
+  & > .entry-content {
+    flex: 1 1 50%;
+  }
+}

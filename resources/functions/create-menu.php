@@ -8,9 +8,14 @@ function menu_item_has_children($menu, $parent_id)
   return $found_menu_items;
 }
 
-function create_menu($menu_id = '')
-{
-  $menu = wp_get_nav_menu_items($menu_id);
+function create_menu($menu_location = 'primary_navigation')
+{  
+  $locations = get_nav_menu_locations();
+
+  $menu_object = wp_get_nav_menu_object($locations[$menu_location]);
+
+  $menu = wp_get_nav_menu_items($menu_object->term_id);
+
   $new_menu = array();
 
   foreach ($menu as $item) {
